@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#33312E"
-    tools:context=".MainActivity" >
+    tools:context=".Startseite" >
 
     <TextView
         android:id="@+id/textLabel"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:fontFamily="sans-serif-black"
-        android:text="Hallo (User)"
+        android:text="Hallo!"
         android:textColor="#FFFF"
         android:textSize="45sp"
         android:textStyle="bold"
