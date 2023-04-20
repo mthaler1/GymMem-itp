@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">GymMem</string>
+    <string name="app_name">Muskelgruppe auswählen</string>
+    <string-array name="muskelgruppen">
+        <item>Beine</item>
+        <item>Bauch</item>
+        <item>Brust</item>
+        <item>Rücken</item>
+        <item>Schultern</item>
+        <item>Arme</item>
+    </string-array>
 </resources>
