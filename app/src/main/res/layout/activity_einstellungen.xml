@@ -4,6 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33312E"
     tools:context=".Einstellungen">
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="165dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Logo von GymMem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrierenButton5"
+        app:srcCompat="@drawable/logo_transparent" />
+
+    <Button
+        android:id="@+id/registrierenButton2"
+        android:layout_width="292dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="104dp"
+        android:alpha="0.75"
+        android:backgroundTint="#FFFFFF"
+        android:text="Email Adresse ändern"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabel2" />
+
+    <Button
+        android:id="@+id/registrierenButton3"
+        android:layout_width="292dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.75"
+        android:backgroundTint="#FFFFFF"
+        android:text="Passwort ändern"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrierenButton2" />
+
+    <Button
+        android:id="@+id/registrierenButton4"
+        android:layout_width="292dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.75"
+        android:backgroundTint="#FFFFFF"
+        android:text="Hilfe & Feedback"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrierenButton3" />
+
+    <Button
+        android:id="@+id/registrierenButton5"
+        android:layout_width="292dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.75"
+        android:backgroundTint="#2CD6FA"
+        android:text="Abmelden"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrierenButton4" />
+
+    <TextView
+        android:id="@+id/textLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Einstellungen"
+        android:textColor="#FFFF"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
