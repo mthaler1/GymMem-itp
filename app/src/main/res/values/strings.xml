@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Muskelgruppe auswählen</string>
+    <string name="app_name">GymMem</string>
     <string-array name="muskelgruppen">
         <item>Beine</item>
         <item>Bauch</item>
