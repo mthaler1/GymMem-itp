@@ -7,6 +7,22 @@
     android:background="#33312E"
     tools:context=".Startseite" >
 
+    <Button
+        android:id="@+id/buttonHilfe2"
+        android:layout_width="232dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="204dp"
+        android:alpha="0.75"
+        android:backgroundTint="#FFFFFF"
+        android:text="Training suchen"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining" />
+
     <TextView
         android:id="@+id/textLabel"
         android:layout_width="wrap_content"
