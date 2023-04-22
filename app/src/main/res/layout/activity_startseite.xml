@@ -7,6 +7,7 @@
     android:background="#33312E"
     tools:context=".Startseite" >
 
+
     <Button
         android:id="@+id/buttonHilfe2"
         android:layout_width="232dp"
