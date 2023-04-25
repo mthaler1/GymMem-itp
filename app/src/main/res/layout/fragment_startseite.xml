@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#33312E"
-    tools:context=".Startseite"
-    android:id="@+id/alles">
+    tools:context=".StartseiteFragment" >
 
 
     <Button
@@ -165,5 +164,5 @@
         app:menu="@menu/bottom_nav_menu"
 
         />
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>

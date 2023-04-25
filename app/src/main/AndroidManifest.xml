@@ -25,13 +25,13 @@
             android:name=".VerTraining"
             android:exported="false" />
         <activity
-            android:name=".Einstellungen"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".Registrieren"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".Startseite"
             android:exported="true">
             <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -40,7 +40,7 @@
     </intent-filter>
         </activity>
         <activity
-            android:name=".Startseite"
+            android:name=".Einstellungen"
             android:exported="false" />
     </application>
 
