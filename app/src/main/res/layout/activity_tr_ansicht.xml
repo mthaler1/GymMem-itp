@@ -4,6 +4,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33312E"
     tools:context=".TrAnsicht">
 
+    <Button
+        android:id="@+id/buttonHilfe3"
+        android:layout_width="232dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="51dp"
+        android:alpha="0.75"
+        android:backgroundTint="#FFFFFF"
+        android:text="Beenden"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datum6" />
+
+    <TextView
+        android:id="@+id/datum6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Übung/Gewicht/WH"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textTraining9"
+        app:layout_constraintTop_toBottomOf="@+id/datum4" />
+
+    <TextView
+        android:id="@+id/datum5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Übung/Gewicht/WH"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textTraining5"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
+
+    <TextView
+        android:id="@+id/datum4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Übung/Gewicht/WH"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textTraining6"
+        app:layout_constraintTop_toBottomOf="@+id/datum5" />
+
+    <Button
+        android:id="@+id/buttonTrainingStarten2"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#2CD6FA"
+        android:text="Satz hinzufügen"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transicht" />
+
+    <TextView
+        android:id="@+id/textTraining9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Satz 3"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTraining6" />
+
+    <TextView
+        android:id="@+id/textTraining6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Satz 2"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTraining5" />
+
+    <TextView
+        android:id="@+id/textTraining5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Satz 1"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
+
+    <TextView
+        android:id="@+id/textLabelTraining2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Abgeschlossene Sätze"
+        android:textColor="#FFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTrainingStarten2" />
+
+    <TextView
+        android:id="@+id/transicht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Trainings-Name"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

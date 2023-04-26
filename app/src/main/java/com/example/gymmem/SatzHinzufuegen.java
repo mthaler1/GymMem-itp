@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Einstellungen extends AppCompatActivity {
+public class SatzHinzufuegen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_einstellungen);
+        setContentView(R.layout.activity_satz_hinzufuegen);
     }
 }
