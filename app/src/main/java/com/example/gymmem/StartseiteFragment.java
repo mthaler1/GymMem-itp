@@ -1,5 +1,6 @@
 package com.example.gymmem;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class StartseiteFragment extends Fragment {
@@ -23,7 +25,20 @@ public class StartseiteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         TextView header = getView().findViewById(R.id.textLabel);
-        String name = getActivity().getIntent().getStringExtra("name");
-        header.setText("Hallo "+name+"!");
+        TextView training1 = getView().findViewById(R.id.textTraining1);
+        header.setText("Hallo Raphael!");
+        Button trainingStarten = getView().findViewById(R.id.buttonTrainingStarten);
+        trainingStarten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), TrStarten.class));
+            }
+        });
+        training1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), VerTraining.class));
+            }
+        });
     }
 }

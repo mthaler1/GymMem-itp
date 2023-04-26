@@ -7,69 +7,47 @@
     android:background="#33312E"
     tools:context=".TrAnsicht">
 
-    <Button
-        android:id="@+id/buttonHilfe3"
-        android:layout_width="232dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="51dp"
-        android:alpha="0.75"
-        android:backgroundTint="#FFFFFF"
-        android:text="Beenden"
-        android:textColor="@color/black"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/datum6" />
-
     <TextView
-        android:id="@+id/datum6"
+        android:id="@+id/uegwh3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="Übung/Gewicht/WH"
+        android:text="Bankdrücken/20kg/15"
         android:textColor="#FFFF"
-        android:textSize="25sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textTraining9"
-        app:layout_constraintTop_toBottomOf="@+id/datum4" />
+        app:layout_constraintTop_toBottomOf="@+id/uegwh2" />
 
     <TextView
-        android:id="@+id/datum5"
+        android:id="@+id/uegwh1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="Übung/Gewicht/WH"
+        android:text="Bankdrücken/25kg/13"
         android:textColor="#FFFF"
-        android:textSize="25sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/uegwh2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textTraining5"
         app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
 
     <TextView
-        android:id="@+id/datum4"
+        android:id="@+id/uegwh2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="Übung/Gewicht/WH"
+        android:text="Bankdrücken/22,5kg/14"
         android:textColor="#FFFF"
-        android:textSize="25sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textTraining6"
-        app:layout_constraintTop_toBottomOf="@+id/datum5" />
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
 
     <Button
-        android:id="@+id/buttonTrainingStarten2"
+        android:id="@+id/satzHinzufugen"
         android:layout_width="wrap_content"
         android:layout_height="73dp"
         android:layout_marginTop="56dp"
@@ -86,43 +64,41 @@
         android:id="@+id/textTraining9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="32dp"
         android:fontFamily="sans-serif-black"
         android:text="Satz 3"
         android:textAllCaps="false"
         android:textColor="#FFFF"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTraining6" />
 
     <TextView
         android:id="@+id/textTraining6"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
         android:text="Satz 2"
         android:textAllCaps="false"
         android:textColor="#FFFF"
         android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTraining5" />
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
 
     <TextView
         android:id="@+id/textTraining5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="32dp"
         android:fontFamily="sans-serif-black"
         android:text="Satz 1"
         android:textAllCaps="false"
         android:textColor="#FFFF"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintBottom_toTopOf="@+id/textTraining6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
 
@@ -138,7 +114,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonTrainingStarten2" />
+        app:layout_constraintTop_toBottomOf="@+id/satzHinzufugen" />
 
     <TextView
         android:id="@+id/transicht"
@@ -152,4 +128,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/beenden"
+        android:layout_width="232dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="64dp"
+        android:alpha="0.75"
+        android:backgroundTint="#FFFFFF"
+        android:text="Beenden"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
