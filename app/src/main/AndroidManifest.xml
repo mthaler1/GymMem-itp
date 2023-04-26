@@ -22,29 +22,22 @@
             android:name=".TrStarten"
             android:exported="false" />
         <activity
-            android:name=".UeErstellen"
-            android:exported="false" />
-        <activity
             android:name=".VerTraining"
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Registrieren"
             android:exported="false" />
         <activity
             android:name=".Startseite"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Einstellungen"
-            android:exported="false" />
+            android:exported="false"/>
     </application>
 
 </manifest>

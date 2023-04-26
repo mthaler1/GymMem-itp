@@ -18,13 +18,15 @@
         android:text="Willkommen bei \nGymMem!"
         android:textColor="@color/white"
         android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="195dp"
-        android:layout_height="173dp"
+        android:layout_width="149dp"
+        android:layout_height="134dp"
         android:layout_marginTop="16dp"
         android:contentDescription="Logo von GymMem"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,5 +101,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrierenButton" />
+    <TextView
+        android:id="@+id/ausgabe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
