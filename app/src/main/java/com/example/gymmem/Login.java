@@ -28,7 +28,9 @@ public class Login extends AppCompatActivity {
                     ausgabe.setText("Mindestens eine Eingabe ist leer!");
                 }
                 else {
-                    startActivity(new Intent(Login.this,Startseite.class));
+                    Intent i = new Intent(Login.this,Startseite.class);
+                    i.putExtra("name", name.getText().toString());
+                    startActivity(i);
                 }
             }
         });

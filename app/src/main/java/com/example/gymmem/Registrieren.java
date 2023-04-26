@@ -33,7 +33,9 @@ public class Registrieren extends AppCompatActivity {
                         ausgabe.setText("Passwort muss mindestens 8 Zeichen lang sein.");
                     }
                     else {
-                        startActivity(new Intent(Registrieren.this, Startseite.class));
+                        Intent i = new Intent(Registrieren.this,Startseite.class);
+                        i.putExtra("name", name.getText().toString());
+                        startActivity(i);
                     }
                 }
 
