@@ -45,6 +45,7 @@
         android:hint="Name der Übung"
         android:inputType="text"
         android:textColor="#000000"
+        android:textColorHint="#64636E"
         app:layout_constraintBottom_toTopOf="@+id/muskelgruppen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
