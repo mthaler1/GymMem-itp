@@ -17,9 +17,9 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputWH" />
+        app:layout_constraintTop_toBottomOf="@+id/inputGewicht" />
 
     <Spinner
         android:id="@+id/uebungen"
@@ -36,7 +36,6 @@
         android:id="@+id/inputWH"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
@@ -48,6 +47,22 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputGewicht"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Gewicht in kg"
+        android:inputType="number"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWH" />
 
     <TextView
         android:id="@+id/headerSatz"
