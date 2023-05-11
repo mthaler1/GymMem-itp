@@ -16,4 +16,12 @@ public class Exercise {
     public void setType(ExerciseType type) {
         this.type = type;
     }
+
+    public ExerciseType getType() {
+        return type;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
