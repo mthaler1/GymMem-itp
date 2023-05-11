@@ -10,13 +10,17 @@ public class User {
     private String username;
     private String passwort;
     private UUID userID;
-    private Map<UUID,Training> = new HashMap<>;
+    private Map<UUID, Training> trainings = new HashMap<>();
 
-    public User(String email, String username,String passwort) {
+    public User(String email, String username, String passwort) {
         setEmail(email);
         setUsername(username);
         setPasswort(passwort);
         this.userID = UUID.randomUUID();
+    }
+
+    public void setTrainings(HashMap<UUID, Training> trainings) {
+        this.trainings = trainings;
     }
 
     public String getEmail() {
@@ -24,10 +28,9 @@ public class User {
     }
 
     public void setEmail(String email) {
-        if(checkEmail(email)) {
+        if (checkEmail(email)) {
             this.email = email;
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("Die Email-Adresse ist nicht gültig!");
         }
     }
@@ -37,7 +40,7 @@ public class User {
     }
 
     public void setUsername(String username) {
-        if(username==null || username.equals("")) {
+        if (username == null || username.equals("")) {
             throw new IllegalArgumentException("Der Username ist nicht gültig");
         }
         this.username = username;
@@ -67,5 +70,7 @@ public class User {
         return pattern.matcher(email).matches();
 
     }
+
+
 
 }
