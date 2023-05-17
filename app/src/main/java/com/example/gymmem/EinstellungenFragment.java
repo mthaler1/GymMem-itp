@@ -30,6 +30,20 @@ public class EinstellungenFragment extends Fragment {
                 startActivity(new Intent(getActivity(),MailAendern.class ));
             }
         });
+        Button changePassword = getView().findViewById(R.id.buttonPasswort);
+        changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), PasswortAendern.class));
+            }
+        });
+        Button help = getView().findViewById(R.id.buttonHilfe);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), Help.class));
+            }
+        });
         Button logoff = getView().findViewById(R.id.buttonLogOff);
         logoff.setOnClickListener(new View.OnClickListener() {
             @Override

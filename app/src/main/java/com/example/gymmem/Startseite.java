@@ -27,9 +27,15 @@ public class Startseite extends AppCompatActivity {
         setContentView(R.layout.activity_startseite);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        String msg = getIntent().getStringExtra("origin");
+        if(msg != null && msg.equals("settings")) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.alles, einstellungenFragment).commit();
+            bottomNavigationView.setSelectedItemId(R.id.settings);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.alles, startseiteFragment).commit();
-
+        }
+        else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.alles, startseiteFragment).commit();
+        }
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
