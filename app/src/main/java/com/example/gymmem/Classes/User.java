@@ -2,6 +2,7 @@ package com.example.gymmem.Classes;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
@@ -9,8 +10,22 @@ public class User {
     private String email;
     private String username;
     private String passwort;
+
     private UUID userID;
     private Map<UUID, Training> trainings = new HashMap<>();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return email.equals(user.email) && username.equals(user.username) && passwort.equals(user.passwort) && trainings.equals(user.trainings);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(email, username, passwort, trainings);
+    }
 
     public User(String email, String username, String passwort) {
         setEmail(email);
