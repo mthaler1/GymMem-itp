@@ -59,6 +59,7 @@ public class Registrieren extends AppCompatActivity {
 
     }
 
+
     private void saveUser(String usernameString,String mailString, String passwordString, TextView ausgabe) {
         try {
             User u = new User(mailString,usernameString,passwordString);
@@ -98,7 +99,7 @@ public class Registrieren extends AppCompatActivity {
                 ausgabe.setText("Der eingegebene Benutzername ist ungültig.");
             }
             else if(msg.contains("Passwort") ||msg.contains("Zeichen")) {
-                ausgabe.setText("Das eingegebene Passwort ist ungültig.\nMindestens 8 Zeichen und 2 Zeichengruppen.");
+                ausgabe.setText("Das eingegebene Passwort ist ungültig.\nMindestens 8 Zeichen und 3 Zeichengruppen und von jeder\nGruppe mindestens zwei Zeichen vorkommen.");
             }
             else {
                 ausgabe.setText("Fehler! Probiere es erneut.");

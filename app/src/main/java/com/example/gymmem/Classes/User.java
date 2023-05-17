@@ -74,7 +74,7 @@ public class User {
         int pwStaerke = checkPasswordStrength(passwort);
         if(pwStaerke<2) {
             throw new IllegalArgumentException("Das Passwort muss mindestens 8 Zeichen lang sein und aus mindestens " +
-                    "zwei Zeichengruppen bestehen");
+                    "drei Zeichengruppen bestehen");
 
         }
         this.passwort = passwort;
