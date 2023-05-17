@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1001778965049",
-    "project_id": "gymmemdb",
-    "storage_bucket": "gymmemdb.appspot.com"
+    "project_number": "721444521801",
+    "project_id": "gymmem-e3bd4",
+    "storage_bucket": "gymmem-e3bd4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1001778965049:android:d22c83b6aaf5553bc23be8",
+        "mobilesdk_app_id": "1:721444521801:android:16b3aaddcf7e01e1dffc98",
         "android_client_info": {
-          "package_name": "com.example.datenbanktest"
+          "package_name": "com.example.gymmem"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1001778965049-jp8kr1he0i19f81sv73llvbtia8mh9jg.apps.googleusercontent.com",
+          "client_id": "721444521801-lg2m1nid226bq36154g3msq2t7mtegmb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCDC9GNZcscKbsev-VTeuWCFvDGUs6DYDQ"
+          "current_key": "AIzaSyDp-r8SFgoMdsvbT4yirI_BlkkPYZmKzC8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1001778965049-jp8kr1he0i19f81sv73llvbtia8mh9jg.apps.googleusercontent.com",
+              "client_id": "721444521801-lg2m1nid226bq36154g3msq2t7mtegmb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
