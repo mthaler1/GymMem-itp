@@ -52,7 +52,7 @@ public class Login extends AppCompatActivity {
                                     Log.wtf("ANGEMELDET!", "Der Benutzer "+nameString+" wurde angemeldet!");
                                     startActivity(new Intent(Login.this, Startseite.class));
                                 } else {
-                                    ausgabe.setText("Das eingegebene Passwort ist zu dem Benutzernamen ungültig.");
+                                    ausgabe.setText("Das eingegebene Passwort oder Benutzername ungültig.");
                                     Log.wtf("Passworteingabe", "Passwort ist ungültig");
                                 }
                             }
