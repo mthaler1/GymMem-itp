@@ -20,6 +20,7 @@ public class Training {
     }
 
     public void setName(String name) {
+        CheckTrue.ungueltigeZeichen(name);
         this.name = name;
     }
 
