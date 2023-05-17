@@ -25,7 +25,7 @@
         android:id="@+id/buttonMail"
         android:layout_width="292dp"
         android:layout_height="69dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="60dp"
         android:alpha="0.75"
         android:backgroundTint="#FFFFFF"
         android:text="Email Adresse ändern"
