@@ -12,10 +12,16 @@ public class TrainingSet {
     }
 
     public void setReps(int reps) {
+        if(reps < 0) {
+            throw new IllegalArgumentException("Anzahl der Reps muss positiv sein");
+        }
         this.reps = reps;
     }
 
     public void setWeight(double weight) {
+        if(weight < 0) {
+            throw new IllegalArgumentException("Anzahl des Gewichts muss positiv sein");
+        }
         this.weight = weight;
     }
 
