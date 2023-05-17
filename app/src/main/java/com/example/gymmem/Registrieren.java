@@ -45,7 +45,7 @@ public class Registrieren extends AppCompatActivity {
                     String usernameString = name.getText().toString();
                     String mailString = mail.getText().toString();
                     String passwordString = password.getText().toString();
-
+                    saveUser(usernameString,mailString,passwordString,ausgabe);
                 }
 
             }
@@ -104,5 +104,6 @@ public class Registrieren extends AppCompatActivity {
                 ausgabe.setText("Fehler! Probiere es erneut.");
             }
         }
+
     }
 }
