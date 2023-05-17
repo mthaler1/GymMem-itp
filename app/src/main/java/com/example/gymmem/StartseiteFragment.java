@@ -26,7 +26,7 @@ public class StartseiteFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         TextView header = getView().findViewById(R.id.textLabel);
         TextView training1 = getView().findViewById(R.id.textTraining1);
-        header.setText("Hallo Raphael!");
+        header.setText("Hallo "+Login.getCurrentUserName()+"!");
         Button trainingStarten = getView().findViewById(R.id.buttonTrainingStarten);
         trainingStarten.setOnClickListener(new View.OnClickListener() {
             @Override

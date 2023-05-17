@@ -21,6 +21,7 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
     FirebaseFirestore firestore;
+    private static String currentUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class Login extends AppCompatActivity {
                                 int passwordDatabase = Integer.parseInt(user.get("password").toString());
                                 if (passwordString.hashCode() == passwordDatabase) {
                                     Log.i("ANGEMELDET!", "Der Benutzer "+nameString+" wurde angemeldet!");
+                                    currentUserName = user.get("name").toString();
                                     startActivity(new Intent(Login.this, Startseite.class));
                                 } else {
                                     ausgabe.setText("Das eingegebene Passwort oder Benutzername ungültig.");
@@ -78,5 +80,12 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(Login.this, Registrieren.class));
             }
         });
+    }
+
+    public static String getCurrentUserName() {
+        return currentUserName;
+    }
+    public static void setCurrentUserName(String username) {
+        currentUserName = username;
     }
 }

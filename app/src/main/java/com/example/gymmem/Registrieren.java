@@ -80,6 +80,7 @@ public class Registrieren extends AppCompatActivity {
                     else {
                         docRef.set(user);
                         Log.i("Dokument angelegt","Ein neues Dokument für den User "+u.getUsername()+" wurde erstellt.");
+                        Login.setCurrentUserName(u.getUsername());
                         startActivity(new Intent(Registrieren.this, Startseite.class));
                     }
                 }
