@@ -49,23 +49,23 @@ public class Login extends AppCompatActivity {
                                 Map<String, Object> user =document.getData();
                                 int passwordDatabase = Integer.parseInt(user.get("password").toString());
                                 if (passwordString.hashCode() == passwordDatabase) {
-                                    Log.wtf("ANGEMELDET!", "Der Benutzer "+nameString+" wurde angemeldet!");
+                                    Log.i("ANGEMELDET!", "Der Benutzer "+nameString+" wurde angemeldet!");
                                     startActivity(new Intent(Login.this, Startseite.class));
                                 } else {
                                     ausgabe.setText("Das eingegebene Passwort oder Benutzername ungültig.");
-                                    Log.wtf("Passworteingabe", "Passwort ist ungültig");
+                                    Log.i("Passworteingabe", "Passwort ist ungültig");
                                 }
                             }
                             else {
                                 ausgabe.setText("Es wurde kein Benutzer unter diesem Namen gefunden!");
-                                Log.wtf("Anmeldung","Benutzer nicht gefunden!");
+                                Log.i("Anmeldung","Benutzer nicht gefunden!");
                             }
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             ausgabe.setText("Es wurde kein Benutzer unter diesem Namen gefunden!");
-                            Log.wtf("Anmeldung","Benutzer nicht gefunden!");
+                            Log.i("Anmeldung","Benutzer nicht gefunden!");
                         }
                     });
 
