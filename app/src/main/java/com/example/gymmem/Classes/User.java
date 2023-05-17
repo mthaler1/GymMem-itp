@@ -59,6 +59,7 @@ public class User {
     }
 
     public void setUsername(String username) {
+        CheckTrue.ungueltigeZeichen(username);
         if (username == null || username.equals("")) {
             throw new IllegalArgumentException("Der Username ist nicht gültig");
         }
