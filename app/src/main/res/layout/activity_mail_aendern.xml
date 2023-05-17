@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/inputOldPassword"
+        android:id="@+id/inputOldMail"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginBottom="32dp"
@@ -20,13 +20,13 @@
         android:inputType="text"
         android:textColor="#000000"
         android:textColorHint="#64636E"
-        app:layout_constraintBottom_toTopOf="@+id/inputNewPassword"
+        app:layout_constraintBottom_toTopOf="@+id/inputNewMail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/inputNewPassword"
+        android:id="@+id/inputNewMail"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginBottom="32dp"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inputPasswordConfirm"
+        android:id="@+id/inputPassword2"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
@@ -51,13 +51,13 @@
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="Passwort"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#64636E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNewPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/inputNewMail" />
 
     <Button
         android:id="@+id/changeMailButton"
@@ -70,7 +70,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPasswordConfirm" />
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
 
     <TextView
         android:id="@+id/header"
@@ -97,5 +97,14 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/ausgabe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeMailButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
