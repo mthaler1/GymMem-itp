@@ -23,6 +23,13 @@ public class EinstellungenFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Button changeMail = getView().findViewById(R.id.buttonMail);
+        changeMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),MailAendern.class ));
+            }
+        });
         Button logoff = getView().findViewById(R.id.buttonLogOff);
         logoff.setOnClickListener(new View.OnClickListener() {
             @Override

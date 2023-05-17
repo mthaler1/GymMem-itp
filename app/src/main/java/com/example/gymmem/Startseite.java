@@ -1,22 +1,26 @@
 package com.example.gymmem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import java.util.List;
 
 public class Startseite extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
-    StartseiteFragment startseiteFragment = new StartseiteFragment();
-    EinstellungenFragment einstellungenFragment = new EinstellungenFragment();
-    UeErstellenFragment ueErstellenFragment = new UeErstellenFragment();
-
+    Fragment startseiteFragment = new StartseiteFragment();
+    Fragment einstellungenFragment = new EinstellungenFragment();
+    Fragment ueErstellenFragment = new UeErstellenFragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +28,7 @@ public class Startseite extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.alles,startseiteFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.alles, startseiteFragment).commit();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -33,11 +37,11 @@ public class Startseite extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.alles, startseiteFragment).commit();
                     return true;
                 }
-                if(item.getItemId() == R.id.add) {
+                if (item.getItemId() == R.id.add) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.alles, ueErstellenFragment).commit();
                     return true;
                 }
-                if(item.getItemId() == R.id.settings) {
+                if (item.getItemId() == R.id.settings) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.alles, einstellungenFragment).commit();
                     return true;
                 }
