@@ -85,7 +85,7 @@ public class User {
     }
 
 
-    private static boolean checkEmail(String email) {
+    public static boolean checkEmail(String email) {
         if (email == null) {
             return false;
         }
