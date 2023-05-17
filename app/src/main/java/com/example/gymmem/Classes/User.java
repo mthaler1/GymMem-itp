@@ -38,6 +38,10 @@ public class User {
         this.trainings = trainings;
     }
 
+    public Map getTrainings() {
+        return this.trainings;
+    }
+
     public String getEmail() {
         return email;
     }
