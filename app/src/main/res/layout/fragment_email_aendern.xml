@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/inputOldPassword"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginBottom="32dp"
@@ -20,13 +20,13 @@
         android:inputType="text"
         android:textColor="#000000"
         android:textColorHint="#64636E"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        app:layout_constraintBottom_toTopOf="@+id/inputNewPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/inputNewPassword"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginBottom="32dp"
@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/inputPasswordConfirm"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
@@ -57,10 +57,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/inputNewPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/changeMailButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -70,10 +70,10 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/inputPasswordConfirm" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
@@ -100,9 +100,11 @@
         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="#2CD6FA"
         android:text="Zurück"
         android:textColor="@color/black"
