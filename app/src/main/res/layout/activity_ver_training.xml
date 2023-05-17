@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:fontFamily="sans-serif-black"
-        android:text="XX.XX.XXX XX:XX"
+        android:text="27.04.2023 14:10"
         android:textAllCaps="false"
         android:textColor="#FFFF"
         android:textSize="25sp"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-black"
-        android:text="XX.XX.XXX XX:XX"
+        android:text="27.04.2023 12:30"
         android:textAllCaps="false"
         android:textColor="#FFFF"
         android:textSize="25sp"
@@ -95,5 +95,17 @@
         app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header2" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Zurück"
+        android:backgroundTint="#2CD6FA"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

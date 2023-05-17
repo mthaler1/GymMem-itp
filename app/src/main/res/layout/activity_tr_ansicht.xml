@@ -4,6 +4,144 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#33312E"
     tools:context=".TrAnsicht">
 
+    <TextView
+        android:id="@+id/uegwh3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Bankdrücken/20kg/15"
+        android:textColor="#FFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uegwh2" />
+
+    <TextView
+        android:id="@+id/uegwh1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Bankdrücken/25kg/13"
+        android:textColor="#FFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/uegwh2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
+
+    <TextView
+        android:id="@+id/uegwh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Bankdrücken/22,5kg/14"
+        android:textColor="#FFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
+
+    <Button
+        android:id="@+id/satzHinzufugen"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#2CD6FA"
+        android:text="Satz hinzufügen"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transicht" />
+
+    <TextView
+        android:id="@+id/textTraining9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Satz 3"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTraining6" />
+
+    <TextView
+        android:id="@+id/textTraining6"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Satz 2"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/beenden"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
+
+    <TextView
+        android:id="@+id/textTraining5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Satz 1"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/textTraining6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTraining2" />
+
+    <TextView
+        android:id="@+id/textLabelTraining2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Abgeschlossene Sätze"
+        android:textColor="#FFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/satzHinzufugen" />
+
+    <TextView
+        android:id="@+id/transicht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Trainings-Name"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/beenden"
+        android:layout_width="232dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="64dp"
+        android:alpha="0.75"
+        android:backgroundTint="#FFFFFF"
+        android:text="Beenden"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

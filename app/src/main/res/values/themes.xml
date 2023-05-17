@@ -9,4 +9,5 @@
         <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
     </style>
     <style name="Theme.GymMem" parent="Base.Theme.GymMem" />
+
 </resources>
