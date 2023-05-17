@@ -96,4 +96,6 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonLogOff"
         app:srcCompat="@drawable/logo_transparent" />
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "721444521801",
+    "project_id": "gymmem-e3bd4",
+    "storage_bucket": "gymmem-e3bd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721444521801:android:16b3aaddcf7e01e1dffc98",
+        "android_client_info": {
+          "package_name": "com.example.gymmem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721444521801-lg2m1nid226bq36154g3msq2t7mtegmb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp-r8SFgoMdsvbT4yirI_BlkkPYZmKzC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721444521801-lg2m1nid226bq36154g3msq2t7mtegmb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
