@@ -45,50 +45,7 @@ public class Registrieren extends AppCompatActivity {
                     String usernameString = name.getText().toString();
                     String mailString = mail.getText().toString();
                     String passwordString = password.getText().toString();
-                    try {
-                        User u = new User(mailString,usernameString,passwordString);
-                        Map<String, Object> user = new HashMap<>();
-                        user.put("name",u.getUsername());
-                        user.put("password",u.getPasswort().hashCode());
-                        user.put("email",u.getEmail());
-                        user.put("id",u.getUserID().toString());
-                        user.put("trainings",u.getTrainings());
-                        DocumentReference docRef = FirebaseFirestore.getInstance().collection("User").document(u.getUsername());
-                        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                            @Override
-                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                                DocumentSnapshot document = task.getResult();
-                                if(document.exists()) {
-                                    ausgabe.setText("Ein Account unter diesem Namen existiert bereits.");
-                                }
-                                else {
-                                    docRef.set(user);
-                                    Log.i("Dokument angelegt","Ein neues Dokument für den User "+u.getUsername()+" wurde erstellt.");
-                                    startActivity(new Intent(Registrieren.this, Startseite.class));
-                                }
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                ausgabe.setText("Es ist ein Fehler aufgetreten.");
-                            }
-                        });
-                    }
-                    catch(IllegalArgumentException e) {
-                        String msg = e.getMessage();
-                        if(msg.contains("Email-Adresse")){
-                            ausgabe.setText("Die eingegebene Email-Adresse ist ungültig.");
-                        }
-                        else if(msg.contains("Username")) {
-                            ausgabe.setText("Der eingegebene Benutzername ist ungültig.");
-                        }
-                        else if(msg.contains("Passwort") ||msg.contains("Zeichen")) {
-                            ausgabe.setText("Das eingegebene Passwort ist ungültig.\nMindestens 8 Zeichen und 2 Zeichengruppen.");
-                        }
-                        else {
-                            ausgabe.setText("Fehler! Probiere es erneut.");
-                        }
-                    }
+
                 }
 
             }
@@ -100,5 +57,52 @@ public class Registrieren extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void saveUser(String usernameString,String mailString, String passwordString, TextView ausgabe) {
+        try {
+            User u = new User(mailString,usernameString,passwordString);
+            Map<String, Object> user = new HashMap<>();
+            user.put("name",u.getUsername());
+            user.put("password",u.getPasswort().hashCode());
+            user.put("email",u.getEmail());
+            user.put("id",u.getUserID().toString());
+            user.put("trainings",u.getTrainings());
+            DocumentReference docRef = FirebaseFirestore.getInstance().collection("User").document(u.getUsername());
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    DocumentSnapshot document = task.getResult();
+                    if(document.exists()) {
+                        ausgabe.setText("Ein Account unter diesem Namen existiert bereits.");
+                    }
+                    else {
+                        docRef.set(user);
+                        Log.i("Dokument angelegt","Ein neues Dokument für den User "+u.getUsername()+" wurde erstellt.");
+                        startActivity(new Intent(Registrieren.this, Startseite.class));
+                    }
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    ausgabe.setText("Es ist ein Fehler aufgetreten.");
+                }
+            });
+        }
+        catch(IllegalArgumentException e) {
+            String msg = e.getMessage();
+            if(msg.contains("Email-Adresse")){
+                ausgabe.setText("Die eingegebene Email-Adresse ist ungültig.");
+            }
+            else if(msg.contains("Username")) {
+                ausgabe.setText("Der eingegebene Benutzername ist ungültig.");
+            }
+            else if(msg.contains("Passwort") ||msg.contains("Zeichen")) {
+                ausgabe.setText("Das eingegebene Passwort ist ungültig.\nMindestens 8 Zeichen und 2 Zeichengruppen.");
+            }
+            else {
+                ausgabe.setText("Fehler! Probiere es erneut.");
+            }
+        }
     }
 }
