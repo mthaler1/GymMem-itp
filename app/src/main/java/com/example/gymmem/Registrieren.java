@@ -63,7 +63,7 @@ public class Registrieren extends AppCompatActivity {
                                 }
                                 else {
                                     docRef.set(user);
-                                    Log.wtf("Dokument angelegt","Ein neues Dokument für den User "+u.getUsername()+" wurde erstellt.");
+                                    Log.i("Dokument angelegt","Ein neues Dokument für den User "+u.getUsername()+" wurde erstellt.");
                                     startActivity(new Intent(Registrieren.this, Startseite.class));
                                 }
                             }
@@ -71,7 +71,6 @@ public class Registrieren extends AppCompatActivity {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 ausgabe.setText("Es ist ein Fehler aufgetreten.");
-                                Log.wtf("Registrieren","Es ist ein Fehler bei der Registrierung aufgetreten.");
                             }
                         });
                     }
