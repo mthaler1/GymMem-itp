@@ -17,6 +17,7 @@ public class Training {
         this.setType(type);
         this.setDateStart(dateStart);
         this.sets = new ArrayList<>();
+        id = UUID.randomUUID();
     }
 
     public void setName(String name) {
