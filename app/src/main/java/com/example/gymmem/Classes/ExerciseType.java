@@ -6,7 +6,8 @@ public enum ExerciseType {
     ARMS,
     SHOULDERS,
     LEGS,
-    ABS;
+    ABS,
+    OTHER;
     private ExerciseType() {
 
     }
