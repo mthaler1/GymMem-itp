@@ -54,7 +54,7 @@ public class UeErstellenFragment extends Fragment {
             public void onClick(View view) {
                 try {
                     if(TextUtils.isEmpty(input.getText())){
-                        ausgabe.setText("Lege einen Name für die Übung fest!");
+                        ausgabe.setText("Lege einen Namen für die Übung fest!");
                     }
                     else {
                         Log.i("Eingabe", input.getText().toString());
