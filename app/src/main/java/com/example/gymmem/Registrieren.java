@@ -56,6 +56,13 @@ public class Registrieren extends AppCompatActivity {
                 startActivity(new Intent(Registrieren.this, Login.class));
             }
         });
+        Button forgetPassword = findViewById(R.id.buttonPasswortForget);
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Registrieren.this, PasswordVergessen.class));
+            }
+        });
 
     }
 

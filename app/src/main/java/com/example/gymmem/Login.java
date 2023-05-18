@@ -80,6 +80,13 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(Login.this, Registrieren.class));
             }
         });
+        Button forgetPassword = findViewById(R.id.buttonPasswortForget);
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this, PasswordVergessen.class));
+            }
+        });
     }
 
     public static String getCurrentUserName() {

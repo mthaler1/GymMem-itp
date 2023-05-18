@@ -59,6 +59,7 @@ public class PasswortAendern extends AppCompatActivity {
                     }
                     if(User.checkPasswordStrength(newPassword.getText().toString())<2) {
                         ausgabe.setText("Das eingegebene Passwort ist ungültig.\nMindestens 8 Zeichen und 3 Zeichengruppen und von jeder\nGruppe mindestens zwei Zeichen vorkommen.");
+                        return;
                     }
                     DocumentReference docRef = FirebaseFirestore.getInstance().collection("User").document(Login.getCurrentUserName());
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
