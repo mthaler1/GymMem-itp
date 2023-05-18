@@ -87,6 +87,13 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(Login.this, PasswordVergessen.class));
             }
         });
+        Button dummySave = findViewById(R.id.dummySave);
+        dummySave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this, SaveDummies.class));
+            }
+        });
     }
 
     public static String getCurrentUserName() {
