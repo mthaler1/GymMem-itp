@@ -5,7 +5,7 @@ public class TrainingSet {
     private double weight;
     private Exercise exercise;
 
-    public TrainingSet(int weight, int reps) {
+    public TrainingSet(int weight, int reps, Exercise exercise) {
         this.setWeight(weight);
         this.setReps(reps);
         this.setExercise(exercise);
