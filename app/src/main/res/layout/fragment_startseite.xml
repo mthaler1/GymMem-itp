@@ -15,7 +15,7 @@
         android:layout_marginTop="204dp"
         android:alpha="0.75"
         android:backgroundTint="#FFFFFF"
-        android:text="Training suchen"
+        android:text="Trainings anzeigen"
         android:textColor="@color/black"
         android:textSize="21sp"
         android:textStyle="bold"
