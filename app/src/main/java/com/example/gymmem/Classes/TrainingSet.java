@@ -1,14 +1,18 @@
 package com.example.gymmem.Classes;
 
+import java.util.UUID;
+
 public class TrainingSet {
     private int reps;
     private double weight;
     private Exercise exercise;
+    private UUID id;
 
     public TrainingSet(double weight, int reps, Exercise exercise) {
         this.setWeight(weight);
         this.setReps(reps);
         this.setExercise(exercise);
+        this.id = UUID.randomUUID();
     }
 
     public void setReps(int reps) {
@@ -28,4 +32,5 @@ public class TrainingSet {
     public void setExercise(Exercise exercise) {
         this.exercise = exercise;
     }
+    public UUID getId() {return this.id;}
 }
