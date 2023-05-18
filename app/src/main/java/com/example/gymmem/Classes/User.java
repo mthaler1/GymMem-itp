@@ -34,12 +34,17 @@ public class User {
         this.userID = UUID.randomUUID();
     }
 
+
     public void setTrainings(HashMap<UUID, Training> trainings) {
         this.trainings = trainings;
     }
 
     public Map getTrainings() {
         return this.trainings;
+    }
+
+    public void addTraining(Training training) {
+        this.trainings.put(UUID.randomUUID(), training);
     }
 
     public String getEmail() {
