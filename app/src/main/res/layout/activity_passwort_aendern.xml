@@ -17,7 +17,7 @@
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="altes Passwort"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#64636E"
         app:layout_constraintBottom_toTopOf="@+id/inputNewPassword"
@@ -34,7 +34,7 @@
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="neues Passwort"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#64636E"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +51,7 @@
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="Passwort bestätigen"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#64636E"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputNewPassword" />
 
     <Button
-        android:id="@+id/changeMailButton"
+        android:id="@+id/changePasswortButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -97,5 +97,14 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/ausgabe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePasswortButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
