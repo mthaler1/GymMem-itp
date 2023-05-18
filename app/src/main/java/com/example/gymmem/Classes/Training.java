@@ -41,4 +41,28 @@ public class Training {
             this.sets.add(set);
         }
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Date getDateStart() {
+        return dateStart;
+    }
+
+    public Date getDateEnd() {
+        return dateEnd;
+    }
+
+    public List<TrainingSet> getSets() {
+        return sets;
+    }
+
+    public TrainingType getType() {
+        return type;
+    }
+
+    public UUID getId() {
+        return id;
+    }
 }

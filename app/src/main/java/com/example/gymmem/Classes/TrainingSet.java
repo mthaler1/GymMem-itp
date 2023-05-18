@@ -22,6 +22,14 @@ public class TrainingSet {
         this.reps = reps;
     }
 
+    public int getReps() {
+        return reps;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
     public void setWeight(double weight) {
         if(weight < 0) {
             throw new IllegalArgumentException("Anzahl des Gewichts muss positiv sein");
