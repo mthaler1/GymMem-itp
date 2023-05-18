@@ -33,4 +33,5 @@ public class TrainingSet {
         this.exercise = exercise;
     }
     public UUID getId() {return this.id;}
+    public Exercise getExercise() {return this.exercise;}
 }
