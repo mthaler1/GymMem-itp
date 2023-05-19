@@ -102,7 +102,7 @@ public class UeErstellenFragment extends Fragment {
         });
     }
 
-    private ExerciseType checkExerciseType(Object type) {
+    public static ExerciseType checkExerciseType(Object type) {
         if(type.toString().equals("Beine")) {
             return ExerciseType.LEGS;
         }
