@@ -75,7 +75,7 @@ public class TrStarten extends AppCompatActivity {
                 Training training = new Training(trainingName, checkTrainingType(type), null);
                 defaultUser.addTraining(training);
                 user.put("trainings",defaultUser.getTrainings());
-                docRef.set(user);
+                //docRef.set(user);
             }
         });
     }

@@ -1,17 +1,30 @@
 package com.example.gymmem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.sax.TextElementListener;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SatzHinzufuegen extends AppCompatActivity {
 
@@ -26,6 +39,41 @@ public class SatzHinzufuegen extends AppCompatActivity {
         Button add = findViewById(R.id.buttonAdd);
         EditText wh = findViewById(R.id.inputWH);
         TextView ausgabe = findViewById(R.id.ausgabe);
+
+        CollectionReference collectionReference = FirebaseFirestore.getInstance().collection("Exercise");
+
+        collectionReference.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                if(task.isSuccessful()) {
+                    QuerySnapshot querySnapshot = task.getResult();
+                    if(querySnapshot != null) {
+                        List<String> spinnerElements = new ArrayList<>();
+                        int i = 0;
+                        for(QueryDocumentSnapshot document: querySnapshot) {
+
+                            String exerciseUser = (String) document.get("user").toString();
+
+
+                            if(exerciseUser.equals(Login.getCurrentUserName()) || exerciseUser.equals("PUBLIC")) {
+
+
+                                spinnerElements.add((String) document.get("name").toString());
+
+
+                            }
+                        }
+                        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(SatzHinzufuegen.this, android.R.layout.simple_spinner_item, spinnerElements);
+
+                        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                        uebung.setAdapter(adapter2);
+
+                    }
+                }
+            }
+        });
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

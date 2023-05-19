@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,9 +22,12 @@ import com.example.gymmem.Classes.ExerciseType;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -49,6 +51,7 @@ public class UeErstellenFragment extends Fragment {
         EditText input = getView().findViewById(R.id.UebungEingabe);
         Button add = getView().findViewById(R.id.buttonAdd);
         TextView ausgabe = getView().findViewById(R.id.ausgabe);
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +67,7 @@ public class UeErstellenFragment extends Fragment {
                         Map<String, Object> exercises = new HashMap<>();
                         exercises.put("name",exercise.getName());
                         exercises.put("type",exercise.getType());
+                        exercises.put("user",exercise.getUser());
                         DocumentReference docRef = FirebaseFirestore.getInstance().collection("Exercise").document(exercise.getName());
 
                         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
