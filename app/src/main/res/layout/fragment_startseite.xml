@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/buttonTrainingSuchen"
+        android:id="@+id/buttonTrainingsAnzeigen"
         android:layout_width="232dp"
         android:layout_height="69dp"
         android:layout_marginTop="204dp"
