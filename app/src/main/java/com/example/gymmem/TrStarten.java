@@ -33,6 +33,7 @@ public class TrStarten extends AppCompatActivity {
 
     private String trainingName;
     private Object type;
+    private static Training currentTraining;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public class TrStarten extends AppCompatActivity {
                 else {
                     trainingName = name.getText().toString();
                     type = kategorien.getSelectedItem();
-                    saveData();
+                    newTraining();
                     Intent i = new Intent(TrStarten.this, TrAnsicht.class);
                     i.putExtra("name",name.getText().toString());
                     startActivity(i);
@@ -63,21 +64,8 @@ public class TrStarten extends AppCompatActivity {
         });
     }
 
-    private void saveData() {
-        DocumentReference docRef = FirebaseFirestore.getInstance().collection("User").document(Login.getCurrentUserName());
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot doc = task.getResult();
-                Map<String, Object> user = doc.getData();
-                User defaultUser = new User("default@default.com","default","Default123!123");
-                // defaultUser.setTrainings((HashMap<String, Training>) user.get("trainings"));
-                Training training = new Training(trainingName, checkTrainingType(type), null);
-                defaultUser.addTraining(training);
-                user.put("trainings",defaultUser.getTrainings());
-                //docRef.set(user);
-            }
-        });
+    private void newTraining() {
+        Training training = new Training(trainingName, checkTrainingType(type), new Date());
     }
 
     private TrainingType checkTrainingType(Object type) {
@@ -100,5 +88,9 @@ public class TrStarten extends AppCompatActivity {
             return TrainingType.SHA;
         }
         return null;
+    }
+
+    public static Training getCurrentTraining() {
+        return currentTraining;
     }
 }
