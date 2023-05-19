@@ -17,6 +17,7 @@ public class Training {
         this.setType(type);
         this.setDateStart(dateStart);
         this.sets = new ArrayList<>();
+        id = UUID.randomUUID();
     }
 
     public void setName(String name) {
@@ -40,5 +41,29 @@ public class Training {
         if(set != null) {
             this.sets.add(set);
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Date getDateStart() {
+        return dateStart;
+    }
+
+    public Date getDateEnd() {
+        return dateEnd;
+    }
+
+    public List<TrainingSet> getSets() {
+        return sets;
+    }
+
+    public TrainingType getType() {
+        return type;
+    }
+
+    public UUID getId() {
+        return id;
     }
 }
