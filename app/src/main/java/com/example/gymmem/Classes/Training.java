@@ -20,6 +20,15 @@ public class Training {
         id = UUID.randomUUID();
     }
 
+    public Training(String name, Date dateStart, Date dateEnd, List<TrainingSet> sets, TrainingType type, UUID id) {
+        this.setName(name);
+        this.setDateStart(dateStart);
+        this.setDateEnd(dateEnd);
+        this.setSets(sets);
+        this.setType(type);
+        this.setId(id);
+    }
+
     public void setName(String name) {
         CheckTrue.ungueltigeZeichen(name);
         this.name = name;
@@ -41,6 +50,14 @@ public class Training {
         if(set != null) {
             this.sets.add(set);
         }
+    }
+
+    public void setSets(List<TrainingSet> sets) {
+        this.sets = sets;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getName() {
