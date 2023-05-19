@@ -46,7 +46,7 @@ public class StartseiteFragment extends Fragment {
                 startActivity(new Intent(getActivity(), TrStarten.class));
             }
         });
-        lastThreeTrainings();
+        //lastThreeTrainings();
         TextView t1 = getView().findViewById(R.id.textTraining1);
         t1.setText("");
         TextView tD1 = getView().findViewById(R.id.datum1);
