@@ -203,11 +203,11 @@ public class SaveDummies extends AppCompatActivity {
                         map.put("email",u.getEmail());
                         map.put("id",u.getUserID().toString());
                         map.put("password",u.getPasswort().hashCode());
-                        List<DocumentReference> trainings = new ArrayList<>();
+                        Map<String, Object> trainings = new HashMap();
                         Map<UUID, Training> trainingsMap = u.getTrainings();
                         for(UUID id: trainingsMap.keySet()) {
                             DocumentReference tRef = FirebaseFirestore.getInstance().collection("Training").document(id.toString());
-                            trainings.add(tRef);
+                            trainings.put(id.toString(), tRef);
                         }
                         map.put("trainings",trainings);
                         docRef.set(map);
