@@ -1,12 +1,16 @@
 package com.example.gymmem.Classes;
 
+import com.google.firebase.firestore.ServerTimestamp;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-public class Training {
+public class Training implements Serializable {
     private String name;
+    @ServerTimestamp
     private Date dateStart, dateEnd;
     private List<TrainingSet> sets;
     TrainingType type;
