@@ -28,7 +28,7 @@ public class CheckTrue {
             if(umlaute >= 1) {
                 continue;
             }
-            if(!(buchstabe >= '!' && buchstabe <= '~')) {
+            if(!(buchstabe >= '!' && buchstabe <= '~' || buchstabe == ' ')) {
                 gueltig = false;
             }
         }
