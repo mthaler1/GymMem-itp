@@ -32,6 +32,11 @@ public class Training implements Serializable {
         this.setType(type);
         this.setId(id);
     }
+    //Für Startseite Display
+    public Training(String name, Date dateStart) {
+        this.name = name;
+        this.dateStart = dateStart;
+    }
 
     public void setName(String name) {
         CheckTrue.ungueltigeZeichen(name);
