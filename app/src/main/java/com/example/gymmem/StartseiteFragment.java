@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.gymmem.Classes.CurrentUser;
 import com.example.gymmem.Classes.Training;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,7 +39,7 @@ public class StartseiteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         TextView header = getView().findViewById(R.id.textLabel);
-        header.setText("Hallo "+Login.getCurrentUserName()+"!");
+        header.setText("Hallo "+ CurrentUser.getCurrentUserName()+"!");
         Button trainingStarten = getView().findViewById(R.id.buttonTrainingStarten);
         trainingStarten.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +79,7 @@ public class StartseiteFragment extends Fragment {
 
     }
     private static void lastThreeTrainings() {
-        String currentUserName = Login.getCurrentUserName();
+        String currentUserName = CurrentUser.getCurrentUserName();
         DocumentReference docRef = FirebaseFirestore.getInstance().collection("User").document(currentUserName);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
