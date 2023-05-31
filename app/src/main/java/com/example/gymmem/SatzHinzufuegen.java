@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.gymmem.Classes.CurrentTraining;
 import com.example.gymmem.Classes.CurrentUser;
 import com.example.gymmem.Classes.Exercise;
 import com.example.gymmem.Classes.TrainingSet;
@@ -28,13 +27,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import org.checkerframework.checker.units.qual.A;
-
 import java.sql.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class SatzHinzufuegen extends AppCompatActivity {
 
@@ -114,36 +109,11 @@ public class SatzHinzufuegen extends AppCompatActivity {
                             if(doc.exists()) {
                                 Exercise exercise = new Exercise(exerciseName,UeErstellenFragment.checkExerciseType(doc.getString("type")));
                                 set.setExercise(exercise);
-                                set.setReps(reps);
-                                set.setWeight(weight);
-
-                                Map<String, Object> setMap= new HashMap<>();
-                                setMap.put("exercise",exercise.getName());
-                                setMap.put("reps",set.getReps());
-                                setMap.put("weight",set.getWeight());
-                                docRef.set(setMap);
                             }
                         }
                     });
-
-
-                    DocumentReference docRef2 = FirebaseFirestore.getInstance().collection("Training").document(CurrentTraining.getCurrentTraining());
-
-                    docRef2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task2) {
-                            DocumentSnapshot doc2 = task2.getResult();
-                            if(doc2.exists()) {
-                                Map<String,Object> trData = doc2.getData();
-                                ArrayList<String> sets = (ArrayList<String>) trData.get("sets");
-                                sets.add(set.getId().toString());
-                                trData.put("sets",sets);
-                                docRef2.update(trData);
-
-                            }
-                        }
-                    });
-
+                    set.setReps(reps);
+                    set.setWeight(weight);
 
                     Intent i = new Intent(SatzHinzufuegen.this, TrAnsicht.class);
                     startActivity(i);

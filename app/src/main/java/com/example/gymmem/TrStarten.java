@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
- import com.example.gymmem.Classes.CurrentTraining;
 import com.example.gymmem.Classes.ExerciseType;
 import com.example.gymmem.Classes.Training;
 import com.example.gymmem.Classes.TrainingSet;
@@ -34,6 +33,7 @@ public class TrStarten extends AppCompatActivity {
 
     private String trainingName;
     private Object type;
+    private static Training currentTraining;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +66,6 @@ public class TrStarten extends AppCompatActivity {
 
     private void newTraining() {
         Training training = new Training(trainingName, checkTrainingType(type), new Date());
-        CurrentTraining.setCurrentTraining(training.getId().toString());
     }
 
     private TrainingType checkTrainingType(Object type) {
@@ -91,4 +90,7 @@ public class TrStarten extends AppCompatActivity {
         return null;
     }
 
+    public static Training getCurrentTraining() {
+        return currentTraining;
+    }
 }

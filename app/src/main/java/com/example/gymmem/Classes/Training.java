@@ -40,7 +40,12 @@ public class Training implements Serializable {
 
     public void setName(String name) {
         CheckTrue.ungueltigeZeichen(name);
-        this.name = name;
+        if(name.length() >= 2) {
+            this.name = name;
+        } else {
+            throw new IllegalArgumentException("Name muss mindestens 2 Zeichen enthalten");
+        }
+
     }
 
     public void setDateStart(Date dateStart) {
