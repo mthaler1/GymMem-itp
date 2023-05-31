@@ -95,7 +95,7 @@ public class SatzHinzufuegen extends AppCompatActivity {
 
                     String setExerciseName = uebung.getSelectedItem().toString();
 
-
+                try {
                     int reps = Integer.parseInt(wh.getText().toString());
                     int weight = Integer.parseInt(gewicht.getText().toString());
 
@@ -114,9 +114,16 @@ public class SatzHinzufuegen extends AppCompatActivity {
                     });
                     set.setReps(reps);
                     set.setWeight(weight);
-
                     Intent i = new Intent(SatzHinzufuegen.this, TrAnsicht.class);
                     startActivity(i);
+                } catch(IllegalArgumentException e) {
+                        String msg = e.getMessage();
+                        if(msg.contains("Anzahl der Reps")) {
+                            ausgabe.setText(msg);
+                        } else if(msg.contains("Anzahl des Gewicht")) {
+                            ausgabe.setText(msg);
+                        }
+                    }
                 }
             }
         });
