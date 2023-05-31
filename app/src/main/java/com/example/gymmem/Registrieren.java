@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.gymmem.Classes.CurrentUser;
 import com.example.gymmem.Classes.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -87,7 +88,7 @@ public class Registrieren extends AppCompatActivity {
                     else {
                         docRef.set(user);
                         Log.i("Dokument angelegt","Ein neues Dokument für den User "+u.getUsername()+" wurde erstellt.");
-                        Login.setCurrentUserName(u.getUsername());
+                        CurrentUser.setCurrentUserName(u.getUsername());
                         startActivity(new Intent(Registrieren.this, Startseite.class));
                     }
                 }

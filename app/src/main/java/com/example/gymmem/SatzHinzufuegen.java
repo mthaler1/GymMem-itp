@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.gymmem.Classes.CurrentUser;
 import com.example.gymmem.Classes.Exercise;
 import com.example.gymmem.Classes.TrainingSet;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -62,7 +63,7 @@ public class SatzHinzufuegen extends AppCompatActivity {
                             String exerciseUser = (String) document.get("user").toString();
 
 
-                            if(exerciseUser.equals(Login.getCurrentUserName()) || exerciseUser.equals("PUBLIC")) {
+                            if(exerciseUser.equals(CurrentUser.getCurrentUserName()) || exerciseUser.equals("PUBLIC")) {
 
 
                                 spinnerElements.add((String) document.get("name").toString());

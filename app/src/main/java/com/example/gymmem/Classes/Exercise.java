@@ -13,7 +13,7 @@ public class Exercise {
     public Exercise(String name, ExerciseType type) {
         this.setName(name);
         this.setType(type);
-        this.setUser(Login.getCurrentUserName());
+        this.setUser(CurrentUser.getCurrentUserName());
     }
 
     public String getUser() {

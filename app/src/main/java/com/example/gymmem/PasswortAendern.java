@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.gymmem.Classes.CurrentUser;
 import com.example.gymmem.Classes.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -61,7 +62,7 @@ public class PasswortAendern extends AppCompatActivity {
                         ausgabe.setText("Das eingegebene Passwort ist ungültig.\nMindestens 8 Zeichen und 3 Zeichengruppen und von jeder\nGruppe mindestens zwei Zeichen vorkommen.");
                         return;
                     }
-                    DocumentReference docRef = FirebaseFirestore.getInstance().collection("User").document(Login.getCurrentUserName());
+                    DocumentReference docRef = FirebaseFirestore.getInstance().collection("User").document(CurrentUser.getCurrentUserName());
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DocumentSnapshot> task) {
