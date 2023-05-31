@@ -33,7 +33,6 @@ public class TrStarten extends AppCompatActivity {
 
     private String trainingName;
     private Object type;
-    private TextView ausgabe;
     private static Training currentTraining;
 
     @Override
@@ -46,7 +45,7 @@ public class TrStarten extends AppCompatActivity {
         kategorien.setAdapter(adapter);
         EditText name = findViewById(R.id.inputTrainingsname);
         Button weiter = findViewById(R.id.buttonWeiter);
-        this.ausgabe = findViewById(R.id.ausgabe);
+        TextView ausgabe = findViewById(R.id.ausgabe);
         weiter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,28 +55,17 @@ public class TrStarten extends AppCompatActivity {
                 else {
                     trainingName = name.getText().toString();
                     type = kategorien.getSelectedItem();
-                    try {
-                        newTraining();
-                        Intent i = new Intent(TrStarten.this, TrAnsicht.class);
-                        i.putExtra("name",name.getText().toString());
-                        startActivity(i);
-                    } catch (IllegalArgumentException e) {
-                        String msg = e.getMessage();
-                        if(msg.contains("Keine gültigen")) {
-                            ausgabe.setText(msg);
-                        } else if(msg.contains("Name muss mind")) {
-                            ausgabe.setText(msg);
-                        }
-                    }
-
+                    newTraining();
+                    Intent i = new Intent(TrStarten.this, TrAnsicht.class);
+                    i.putExtra("name",name.getText().toString());
+                    startActivity(i);
                 };
             }
         });
     }
 
     private void newTraining() {
-            Training training = new Training(trainingName, checkTrainingType(type), new Date());
-        
+        Training training = new Training(trainingName, checkTrainingType(type), new Date());
     }
 
     private TrainingType checkTrainingType(Object type) {
