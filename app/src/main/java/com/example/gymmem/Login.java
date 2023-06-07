@@ -19,7 +19,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.*;
 
 import java.util.Map;
-
+/**
+ * Klasse um einen User zu anzumelden
+ * @author Raphael Tarnoczi
+ * @version 2023-4-17
+ */
 public class Login extends AppCompatActivity {
     FirebaseFirestore firestore;
     @Override

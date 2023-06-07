@@ -23,6 +23,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Klasse um das Passwort zu ändern, wenn der User nicht eingeloggt ist
+ * @author Raphael Tarnoczi
+ * @version 2023-5-20
+ */
 public class PasswordVergessen extends AppCompatActivity {
 
     @Override

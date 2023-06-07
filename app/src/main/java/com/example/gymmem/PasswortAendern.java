@@ -23,6 +23,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Klasse um Passwort ändern auszuführen
+ * @author Raphael Tarnoczi
+ * @version 2023-5-15
+ */
 public class PasswortAendern extends AppCompatActivity {
 
     @Override

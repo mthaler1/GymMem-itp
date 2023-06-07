@@ -24,6 +24,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Klasse um einen User zu registrieren
+ * @author Raphael Tarnoczi
+ * @version 2023-4-17
+ */
 public class Registrieren extends AppCompatActivity {
 
     @Override

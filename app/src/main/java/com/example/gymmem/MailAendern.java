@@ -24,6 +24,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * Klasse um Mail ändern auszuführen
+ * @author Raphael Tarnoczi
+ * @version 2023-5-15
+ */
 public class MailAendern extends AppCompatActivity {
 
     @Override
